@@ -24,13 +24,18 @@ app.get('/api/ping', function (req, res, next) {
 		.then(function(projects){
 			res.json(projects);
 			return next();
-		    })
-		.catch(function(error){
+		    });
+
+	    .catch(function(error) {
+		    // catch any errors from db query
+		    res.status(500).json({"error":error});
+
+	    .catch(function(error){
 		    res.status(500).json(error);
 			return next();
-			});
+		});
 
-	    /**	    	    res.json('å®Ÿè£…ã—ã¾ã™');
+	    /**	    	    res.json('’¼Â’Áõ’¤·’¤Ş’¤¹');
 			    return next(); */
 	});
 
