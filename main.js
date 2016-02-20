@@ -6,7 +6,7 @@ var
     parser = require('body-parser');
 
 var knex = require('knex')({
-	client: 'sqlite3',
+	client: 'sqlite3';
 	connection: {
 	    filename ":memory:"
 	}
