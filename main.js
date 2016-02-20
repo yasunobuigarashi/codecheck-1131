@@ -46,9 +46,9 @@ app.post('/api/badrequest', function (req, res, next) {
 	return next();
     })
 
-    app.listen(port, function () {
+/**    app.listen(port, function () {
 	    console.log('Server running with port', port);
-	});
+	    }); */
 
 
 /** @ToDo
